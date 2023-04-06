@@ -1,0 +1,16 @@
+name: "RPL-2023-CICD Demo Branch"
+on:
+  push:
+    branches:
+    - development
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@development
+    - name: Do python linter test check
+      run: |
+        sudo apt install python3-pip -y
+        python -m pip install pylint
+        pylint tes.py --disable=C0114,C0116
