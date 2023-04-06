@@ -1,0 +1,1 @@
+print("Ngaret gan")
