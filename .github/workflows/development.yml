@@ -8,7 +8,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@development
+    - uses: actions/checkout@master
     - name: Do python linter test check
       run: |
         sudo apt install python3-pip -y
